@@ -1,7 +1,8 @@
 # code your #valid_move? method here
 def valid_move?(board, index)
   validIndex = (index >= 0 && index <= 9)
-  validIndex && !position_taken(board, index)
+  position_taken = position_taken(board, index)
+  validIndex && !position_taken
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
